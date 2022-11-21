@@ -38,7 +38,7 @@ function Deposit() {
           </div>
           <div class="col-md-4">
             <img
-              className="img-fluid text-start deposit-img "
+              className="img-fluid text-start deposit-img1 "
               src="Assests/Frame.png"
               alt=""
             />

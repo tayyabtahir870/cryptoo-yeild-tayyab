@@ -9,6 +9,10 @@
     letter-spacing: 0.005em;
     color: #ffffff;
   }
+  .headerbutton{
+    background-color: #EC78CC !important;
+    border-color: #EC78CC !important;
+  }
   .nft {
     font-family: "Poppins";
     font-style: normal;
@@ -170,12 +174,13 @@
   }
 }
 
-.card {
+.need {
   background-image: url("Media/BG.png");
   background-repeat: no-repeat;
   background-size: cover;
-  .card-text1 {
-    margin-top: 16rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  .need-text1 {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
@@ -184,7 +189,7 @@
 
     color: #ffffff;
   }
-  .card-text2 {
+  .need-text2 {
     font-family: "Poppins";
 
     font-style: normal;
@@ -194,7 +199,7 @@
 
     color: #ffffff;
   }
-  .card-text3 {
+  .need-text3 {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -203,7 +208,7 @@
 
     color: #ffffff;
   }
-  .btn {
+  .btn1 {
     padding: 16px 32px;
     gap: 24px;
     width: 250px;
@@ -211,7 +216,7 @@
     background: rgba(33, 30, 31, 0.5);
     border: 1px solid #ffffff;
     border-radius: 8px;
-    margin-bottom: 16rem;
+
     color: white;
   }
 }
@@ -219,6 +224,25 @@
 .deposit {
   .deposit-img {
     margin-top: 10rem;
+    margin-bottom: -6rem;
+    z-index: -1;
+    position: absolute;
+  }
+  .deposit-img1 {
+    margin-top: 10rem;
+    margin-bottom: -8rem;
+    z-index: -1;
+    position: absolute;
+  }
+  @media screen and (max-width: 600px) {
+    .deposit-img{
+     width: 90vw;
+     position: relative;
+    }
+    .deposit-img1{
+      width: 90vw;
+      position: relative;
+    }
   }
   .deposit-col {
     margin-top: 16rem;
@@ -256,7 +280,7 @@
     color: #2c3a4b;
   }
   .depositbutton {
-    padding: 16px 32px;
+    padding: 16px 16px;
     gap: 24px;
     width: 214px;
     height: 63px;
@@ -264,6 +288,7 @@
     border-radius: 8px;
     border: none;
     color: white;
+    margin-bottom: 4rem;
   }
   .upto {
     font-family: "Poppins";
@@ -292,58 +317,222 @@
 
     color: #2c3a4b;
   }
+  .defi {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+
+    color: #0063f7;
+  }
+  .keys {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+
+    color: black;
+  }
 }
 
-.card1{
-    background-image: url("Media/bg1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    .card-text1 {
-    
-      font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 18px;
+.vision {
+  background-image: url("Media/bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  .card-text1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
 
-background: linear-gradient(95.02deg, #FF82D4 0%, #1B1378 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-emphasis-color: transparent;
+    background: linear-gradient(95.02deg, #ff82d4 0%, #1b1378 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-emphasis-color: transparent;
+  }
+  .card-text2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
 
-
-    }
-    .card-text2 {
-      font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 56px;
-
-
-color: #FFFFFF;
-    }
-    .card-text3 {
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 400;
-      display: flex;
+    color: #ffffff;
+  }
+  .card-text3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
     justify-content: center;
-      font-size: 18px;
-      line-height: 170%;
-      color: #ffffff;
-    }
-    .btn {
-      padding: 16px 32px;
-      gap: 24px;
-      width: 250px;
-      height: 60px;
-      background: rgba(33, 30, 31, 0.5);
-      border: 1px solid #ffffff;
-      border-radius: 8px;
-      color: white;
+    font-size: 18px;
+    line-height: 170%;
+    color: #ffffff;
+  }
+  .btn {
+    padding: 16px 32px;
+    gap: 24px;
+    width: 250px;
+    height: 60px;
+    background: rgba(33, 30, 31, 0.5);
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    color: white;
+  }
+  .founded {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 170%;
+
+    color: #ffffff;
+  }
+  .year {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 130%;
+
+    color: #d895ff;
+  }
+}
+
+.liqiudity {
+  .columns {
+    margin-top: 15rem;
+  }
+  .text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+
+    color: #160f1a;
+  }
+  .list {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #2c3a4b;
+  }
+}
+
+.trade {
+  padding-top: 100px;
+  background-color: #160f1a;
+  color: #fff;
+  .desktop {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+  }
+  .tradepic {
+    margin-bottom: -200px;
+  }
+  .crypto-exchange {
+    background: linear-gradient(95.02deg, #ff82d4 0%, #1b1378 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .exchange {
+    text-decoration: none !important;
+    &:hover {
+      color: none !important;
     }
   }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  max-width: 400px;
+  border: 2px solid grey !important;
+  box-shadow: 6px 12px grey !important;
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 10px !important;
+}
+
+.btn1 {
+  border-radius: 5px;
+}
+
+.passward {
+  text-decoration: none;
+  color: black;
+}
+
+.textcolor {
+  color: #465a65;
+}
+
+.signup {
+  // background-image: url("Media/tradepic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 400px;
+    border: 2px solid gray !important;
+    box-shadow: 6px 12px gray !important;
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 10px !important;
+  }
+}
+
+.homee {
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 400px;
+    border: 2px solid #f5c1a2 !important;
+    box-shadow: 6px 12px #f5c1a2 !important;
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 10px !important;
+  }
+  .homeimg {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 90px;
+  }
+}
+
+label progress {
+  width: 35px;
+}
+label img {
+  width: 70px;
+  height: 70px;
+}
+
+#input-file {
+  display: none !important;
+}
+
+.loginbg{
+  height: 100%;
+  // background-image:url("Media/loginpic.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}

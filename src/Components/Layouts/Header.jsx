@@ -1,8 +1,15 @@
 import React from 'react'
 import {AiFillApple} from 'react-icons/ai'
+import { Link, useNavigate } from "react-router-dom";
 import {SiGoogleplay} from 'react-icons/si'
 
 function Header() {
+
+  const navigate = useNavigate();
+  const logout = () => {
+    sessionStorage.removeItem("auth");
+    navigate("/login");
+  };
   return (
     <div>
       <div className="header  ">
@@ -15,7 +22,7 @@ function Header() {
             
 
             <button
-              class="navbar-toggler"
+              class="navbar-toggler bg-white"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
@@ -84,6 +91,28 @@ function Header() {
                    </a>
                
                  </li> &nbsp;&nbsp;&nbsp;&nbsp;
+                 <li class="nav-item">
+                   
+                 <button
+                  type="button"
+                  className="btn btn-primary headerbutton"
+                  onClick={logout}
+                >
+                  Logout
+                </button>
+
+                &nbsp;
+
+                <Link  
+        to="/contact"
+        type="button"
+                  className="btn btn-primary headerbutton"
+                  // onClick={logout}
+                >
+                  Contact Us
+                </Link>
+               
+                 </li>
                 </ul>
               </div>
             </div>

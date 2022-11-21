@@ -13,7 +13,8 @@ function Table() {
 
         </div>
         <div className='container'>
-        <table class="table">
+             <div className='table-responsive'>
+             <table class="table">
   <thead>
     <tr>
       <th scope="col" className='bitcoin'>Bitcoin <span className='bta'>BTA</span></th>
@@ -60,6 +61,7 @@ function Table() {
     </tr>
   </tbody>
 </table>
+             </div>
         </div>
         <div className='text-center'>
             <button className='tablebutton'>Learn More <span><BsArrowRight /></span></button>

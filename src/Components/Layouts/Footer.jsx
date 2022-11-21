@@ -11,13 +11,14 @@ import { SiDiscord } from "react-icons/si";
 import { BsTelegram } from "react-icons/bs";
 import { BsMedium } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div className="footer">
       <div class="container text-start">
         <div class="row ">
-          <div class="col-md-2 mt-5">
+          <div class="col-md-2 col-6 mt-5">
             <h6 className="footer-heading ">App</h6>
             <ul className="list-unstyled footer-list">
               <li>Buy and Sell</li>
@@ -26,7 +27,7 @@ function Footer() {
               <li>Crypto.com Pay</li>
             </ul>
           </div>
-          <div class="col-md-2  mt-5">
+          <div class="col-md-2 col-6   mt-5">
             <h6 className="footer-heading">Exchange</h6>
             <ul className="list-unstyled footer-list">
               <li>Exchange Home</li>
@@ -38,14 +39,14 @@ function Footer() {
               <li>Commerce</li>
             </ul>
           </div>
-          <div class="col-md-2  mt-5">
+          <div class="col-md-2 col-6  mt-5">
             <h6 className="footer-heading">Blockchain</h6>
             <ul className="list-unstyled footer-list">
               <li>Crypto.org Chain</li>
               <li>Chain Explorer</li>
             </ul>
           </div>
-          <div class="col-md-2  mt-5">
+          <div class="col-md-2 col-6  mt-5">
             <h6 className="footer-heading">Resources</h6>
             <ul className="list-unstyled footer-list">
               <li>Prices</li>
@@ -54,7 +55,7 @@ function Footer() {
               <li>Support</li>
             </ul>
           </div>
-          <div class="col-md-4  mt-5">
+          <div class="col-md-4 col-6  mt-5">
             <div>
               <img src="Assests/appstore.png" alt="" />
               <img src="Assests/Group.png" alt="" />
@@ -78,20 +79,20 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-2">
+        <div className="row mt-5">
+          <div className="col-md-2 col-6">
             <h6 className="footer-heading">Cards</h6>
             <ul className="list-unstyled footer-list">
               <li>Metal Visa Cards</li>
             </ul>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-2 col-6">
             <h6 className="footer-heading">Commerce</h6>
             <ul className="list-unstyled footer-list">
               <li>Pay for Business</li>
             </ul>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-2 col-6">
             <h6 className="footer-heading">DeFi</h6>
             <ul className="list-unstyled footer-list">
               <li>Wallet</li>
@@ -100,7 +101,7 @@ function Footer() {
               <li>Dashboard</li>
             </ul>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-2 col-6">
             <h6 className="footer-heading">Company</h6>
             <ul className="list-unstyled footer-list">
               <li>About</li>
@@ -110,7 +111,7 @@ function Footer() {
               <li>Contact</li>
             </ul>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-2 col-6">
           <h6 className="footer-heading">Learn</h6>
             <ul className="list-unstyled footer-list">
               <li>What's Trending</li>
@@ -120,6 +121,10 @@ function Footer() {
               <li>Research</li>
               <li>Market Updates</li>
             </ul>
+          </div>
+          <div className="col-md-2">
+          
+        
           </div>
         </div>
         <div className="row">
