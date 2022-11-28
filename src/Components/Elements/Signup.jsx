@@ -37,7 +37,7 @@ function signup({ title, setEmail, setPassword, handleAction,setName,setContact,
 
           <div>
           <input
-                     
+                      id="email-check"
                      className="form-control"
                      type="text"
                      placeholder="Enter Your email"
@@ -56,7 +56,7 @@ function signup({ title, setEmail, setPassword, handleAction,setName,setContact,
          
         <div>
         <input
-                     
+                      id="pass-check"
                      className="form-control"
                      type="password"
            onChange={(event) => {

@@ -33,6 +33,7 @@ function Login({ title, setEmail, setPassword, handleAction }) {
           </label>
           <div>
           <input
+                     
                       type="password"
                       className="form-control"
                       onChange={(event) => {

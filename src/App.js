@@ -17,6 +17,7 @@ import { db } from "./firebase";
 import Login from "./Components/Elements/Login";
 import Passward from "./Components/Elements/Passward";
 import Contact from "./Components/Elements/Contact";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -39,6 +40,25 @@ function App() {
   const handleAction = (id) => {
     const authenticate = getAuth();
     if (id === 2) {
+
+
+      let emailCheck=document.getElementById("email-check").value;
+      let emailPattern=id=/^[a-z]{1,}[0-9]{1,}@[a-z]{1,}.[a-z]{1,}/gm
+      if(!emailPattern.test(emailCheck)){
+        console.log("invailid email")
+        toast.error("invalid email")
+      }
+
+      let passCheck=document.getElementById("pass-check").value;
+      let pasPattern=/^[a-z]{1,}[A-Z]{1,}[0-9]{1,}/
+
+      if(!pasPattern.test(passCheck)){
+      
+        console.log("invalid passward")
+        toast.error("invalid passward")
+        return
+      }
+
       createUserWithEmailAndPassword(authenticate, email, password)
         .then((response) => {
           navigate("/login");
@@ -62,6 +82,8 @@ function App() {
     }
 
     if (id === 1) {
+     
+
       signInWithEmailAndPassword(authenticate, email, password)
         .then((response) => {
           navigate("/home");
