@@ -5,7 +5,7 @@ import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
 } from "firebase/auth";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -42,20 +42,20 @@ function App() {
     if (id === 2) {
 
 
-      let emailCheck=document.getElementById("email-check").value;
+      let emailCheck=document.getElementById("emailcheck").value;
       let emailPattern=id=/^[a-z]{1,}[0-9]{1,}@[a-z]{1,}.[a-z]{1,}/gm
       if(!emailPattern.test(emailCheck)){
         console.log("invailid email")
-        toast.error("invalid email")
+        toast.error("Email first Alphabet must be in capital, use Specail character")
       }
 
-      let passCheck=document.getElementById("pass-check").value;
+      let passCheck=document.getElementById("passcheck").value;
       let pasPattern=/^[a-z]{1,}[A-Z]{1,}[0-9]{1,}/
 
       if(!pasPattern.test(passCheck)){
       
         console.log("invalid passward")
-        toast.error("invalid passward")
+        toast.error("Passward first Letter start must be in small alphabet")
         return
       }
 
@@ -106,9 +106,8 @@ function App() {
         console.log("verify");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
+       
+       
       });
   };
   const submit = (e) => {
@@ -150,6 +149,7 @@ function App() {
               setEmail={setEmail}
               setPassword={setPassword}
               setContact={setContact}
+              password={password}
               setAddress={setAddress}
               setName={setName}
               handleAction={() => handleAction(2)}
