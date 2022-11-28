@@ -13,7 +13,8 @@ function signup({
 
  
 }) {
-  const pattern= /^[a-z]{1,}[A-Z]{1,}[0-9]{1,}/
+  const pattern= /^[a-z]{1,}[A-Z]{1,}[0-9]{1,}[\D]/
+  const checkPass= pattern.test(password)
   return (
     <div className="signup">
       <div className="container  ">
@@ -108,7 +109,8 @@ function signup({
                   placeholder="Enter your Address"
                 />
               </div>
-
+               {checkPass?"": <span className="checkpass-color"><b>password must contain Small , Capital and Special character</b></span> }
+            
               <br />
 
               <button
