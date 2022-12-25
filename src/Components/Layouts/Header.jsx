@@ -2,11 +2,6 @@ import React from 'react'
 import {AiFillApple} from 'react-icons/ai'
 import { Link, useNavigate } from "react-router-dom";
 import {SiGoogleplay} from 'react-icons/si'
-import {AiFillHome} from 'react-icons/ai'
-import {FaUserFriends} from 'react-icons/fa'
-import {CgProfile} from 'react-icons/cg'
-import {BsMessenger} from 'react-icons/bs'
-import {GrNotification} from 'react-icons/gr'
 
 function Header() {
 
@@ -22,7 +17,7 @@ function Header() {
           <div class="container ">
             <a class="navbar-brand" href="/">
               
-            <h3 className='cryptoo-yeild'>FaceBook</h3>
+            <h3 className='cryptoo-yeild'>Cryptoo Yeild</h3>
             </a>
             
 
@@ -44,7 +39,7 @@ function Header() {
                   <li class="nav-item">
                    
                     <a class="nav-link" >
-                    <p className='nft'><AiFillHome size={30}/></p>
+                    <p className='nft'>NFT</p>
                     </a>
                 
                   </li> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -52,7 +47,7 @@ function Header() {
                   <li class="nav-item">
                    
                    <a class="nav-link" >
-                   <p className='nft'><FaUserFriends size={30}/></p>
+                   <p className='nft'>Price</p>
                    </a>
                
                  </li> &nbsp;&nbsp;&nbsp;&nbsp;     
@@ -60,7 +55,7 @@ function Header() {
                  <li class="nav-item">
                    
                    <a class="nav-link" >
-                   <p className='nft'><CgProfile size={30}/></p>
+                   <p className='nft'>Products</p>
                    </a>
                
                  </li> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -68,7 +63,7 @@ function Header() {
                  <li class="nav-item">
                    
                    <a class="nav-link" >
-                   <p className='nft'><BsMessenger size={30}/></p>
+                   <p className='nft'>Compamy</p>
                    </a>
                
                  </li> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -76,7 +71,7 @@ function Header() {
                  <li class="nav-item">
                    
                    <a class="nav-link" >
-                   <p className='nft'><GrNotification size={30} color="#6D7580"/></p>
+                   <p className='nft'>Learn</p>
                    </a>
                
                  </li> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -98,16 +93,16 @@ function Header() {
                  </li> &nbsp;&nbsp;&nbsp;&nbsp;
                  <li class="nav-item">
                    
-                 {/* <button
+                 <button
                   type="button"
                   className="btn btn-primary headerbutton"
                   onClick={logout}
                 >
                   Logout
-                </button> */}
+                </button>
 
                 &nbsp;
-{/* 
+
                 <Link  
         to="/contact"
         type="button"
@@ -115,7 +110,7 @@ function Header() {
                   // onClick={logout}
                 >
                   Contact Us
-                </Link> */}
+                </Link>
                
                  </li>
                 </ul>

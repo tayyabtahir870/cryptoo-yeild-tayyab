@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {signInWithPopup,FacebookAuthProvider} from 'firebase/auth';
-import { db } from "../../firebase";
+import { signInWithPopup, FacebookAuthProvider } from "firebase/auth";
+import { db, auth } from "../../firebase";
+import { fireEvent } from "@testing-library/react";
 
 function signup({
   title,
@@ -11,24 +12,33 @@ function signup({
   setName,
   setContact,
   setAddress,
-  password
-
- 
+  password,
 }) {
-  const pattern= /^[a-z]{1,}[A-Z]{1,}[0-9]{1,}[\D]/
-  const checkPass= pattern.test(password)
+  const pattern = /^[a-z]{1,}[A-Z]{1,}[0-9]{1,}[\D]/;
+  const checkPass = pattern.test(password);
 
-  const signinwithfacebook=()=>{
+  const signinwithfacebook = () => {
     const provider = new FacebookAuthProvider();
-    signInWithPopup(db,provider)
-    .then((re)=>{
-      console.log(re);
-    })
-    .catch((err)=>{
-      console.log(err.message)
-    })
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
 
-  }
+        const credential = FacebookAuthProvider.credentialFromResult(result);
+        const accessToken = credential.accessToken;
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        const email = error.customData.email;
+
+        const credential = FacebookAuthProvider.credentialFromError(error);
+        console.log(error.message);
+
+       
+      });
+  };
   return (
     <div className="signup">
       <div className="container  ">
@@ -123,15 +133,28 @@ function signup({
                   placeholder="Enter your Address"
                 />
               </div>
-               {checkPass?"": <span className="checkpass-color"><b>password must contain Small , Capital and Special character</b></span> }
-            
+              {checkPass ? (
+                ""
+              ) : (
+                <span className="checkpass-color">
+                  <b>
+                    password must contain Small , Capital and Special character
+                  </b>
+                </span>
+              )}
+
               <br />
 
               <button
                 type="submit"
                 className="btn btn-dark"
                 onClick={handleAction}
-                disabled={ password === "" ? true: false || pattern.test(password)? false: true
+                disabled={
+                  password === ""
+                    ? true
+                    : false || pattern.test(password)
+                    ? false
+                    : true
                 }
               >
                 {title}{" "}
@@ -142,8 +165,13 @@ function signup({
               </Link>
               <br />
               <div>
-               
-                <button onClick={signinwithfacebook} type="button" class="btn btn-primary">Signin With Facebook</button>
+                <button
+                  onClick={signinwithfacebook}
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Signin With Facebook
+                </button>
               </div>
             </div>
           </div>
