@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
         <Header/>
-        <Hero/>
+        {/* <Hero/>
         <Table/>
         <Need/>
         <Deposit/>
@@ -22,7 +22,7 @@ function Home() {
         <Liqiudity/>
         <Simple/>
         <Vision/>
-        <Footer/>
+        <Footer/> */}
     </div>
 
   )

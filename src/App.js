@@ -42,12 +42,12 @@ function App() {
     if (id === 2) {
 
 
-      let emailCheck=document.getElementById("emailcheck").value;
-      let emailPattern=id=/^[a-z]{1,}[0-9]{1,}@[a-z]{1,}.[a-z]{1,}/gm
-      if(!emailPattern.test(emailCheck)){
-        console.log("invailid email")
-        toast.error("Email first Alphabet must be in capital, use Specail character")
-      }
+      // let emailCheck=document.getElementById("emailcheck").value;
+      // let emailPattern=id=/^[a-z]{1,}[0-9]{1,}@[a-z]{1,}.[a-z]{1,}/gm
+      // if(!emailPattern.test(emailCheck)){
+      //   console.log("invailid email")
+      //   toast.error("Email first Alphabet must be in capital, use Specail character")
+      // }
 
       let passCheck=document.getElementById("passcheck").value;
       let pasPattern=/^[a-z]{1,}[A-Z]{1,}[0-9]{1,}/

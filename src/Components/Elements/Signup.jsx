@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {signInWithPopup,FacebookAuthProvider} from 'firebase/auth';
+import { db } from "../../firebase";
 
 function signup({
   title,
@@ -15,6 +17,18 @@ function signup({
 }) {
   const pattern= /^[a-z]{1,}[A-Z]{1,}[0-9]{1,}[\D]/
   const checkPass= pattern.test(password)
+
+  const signinwithfacebook=()=>{
+    const provider = new FacebookAuthProvider();
+    signInWithPopup(db,provider)
+    .then((re)=>{
+      console.log(re);
+    })
+    .catch((err)=>{
+      console.log(err.message)
+    })
+
+  }
   return (
     <div className="signup">
       <div className="container  ">
@@ -127,6 +141,10 @@ function signup({
                 Login
               </Link>
               <br />
+              <div>
+               
+                <button onClick={signinwithfacebook} type="button" class="btn btn-primary">Signin With Facebook</button>
+              </div>
             </div>
           </div>
 
